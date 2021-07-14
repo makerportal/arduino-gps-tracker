@@ -8,6 +8,7 @@ See full tutorial here: [Mini GPS Datalogger with Arduino](https://makersportal.
 ### JUMP TO:
 <a href="#wiring">- Wiring Diagram</a><br>
 <a href="#arduino">- Arduino Codes</a><br>
+<a href="#python">- Python Scripts</a><br>
 
 The arduino-gps-datalogger library can be downloaded using git:
 
@@ -21,7 +22,14 @@ Here, we are wiring the ATGM336H GPS module via SPI to the Arduino Xiao (ATSAMD2
 
 ![ATGM336H wiring to ATSAMD21 - table](/images/atgm336h_datalogger_wiring_table.jpg)
 
+<a id="arduino"></a>
 # - Arduino Code -
 The Arduino code used to log GPS data is found at:
+
+- [gps_datalogger.ino](/arduino/gps_datalogger.ino)
+
+<a id="python"></a>
+# - Python Scripts -
+The Python scripts used to parse the GPS coordinates from the .csv log file and plot them atop a street map can be found at:
 
 - [gps_datalogger.ino](/arduino/gps_datalogger.ino)
