@@ -2,7 +2,6 @@
 #
 # Mapping GPS data acquired by Arduino 
 # -- using cartopy to visualize lat/lon points
-# -- by parsing .csv file: gpslog.csv
 #
 # by Joshua Hrisko | Maker Portal LLC (c) 2021
 #
@@ -41,8 +40,8 @@ with open('GPSLOG.CSV','r') as dat_file:
     reader = csv.reader(dat_file)
     for row in reader:
         arduino_data.append(row)
-
-header = arduino_data[0]
+        
+header = arduino_data[0] # header text
         
 date,time_vec,lats,lons = [],[],[],[]
 for row in arduino_data[1:]:
@@ -50,19 +49,20 @@ for row in arduino_data[1:]:
     time_vec.append(row[1])
     lats.append(float(row[2]))
     lons.append(float(row[3]))
-    
+
 #######################################
 # Formatting the Cartopy plot
 #######################################
 #
-cimgt.Stamen.get_image = image_spoof # reformat web request for street map spoofing
-osm_img = cimgt.Stamen('terrain') # spoofed, downloaded street map
+cimgt.GoogleTiles.get_image = image_spoof # reformat web request for street map spoofing
+osm_img = cimgt.GoogleTiles() # spoofed, downloaded street map
 
-fig = plt.figure(figsize=(16,11)) # open matplotlib figure
+fig = plt.figure(figsize=(14,12),facecolor='#FCFCFC') # open matplotlib figure
 ax1 = plt.axes(projection=osm_img.crs) # project using coordinate reference system (CRS) of street map
 ax1.set_title('Arduino GPS Tracker Map',fontsize=16)
-zoom = 0.001 # zoom out from the bounds of the data array
-extent = [np.min(lons)-zoom,np.max(lons)+zoom,np.min(lats)-zoom,np.max(lats)+zoom] # map view bounds
+lat_zoom = 0.001 # zoom out from the bounds of lats
+lon_zoom = 0.005 # zoom out from the bounds of lons
+extent = [np.min(lons)-lon_zoom,np.max(lons)+lon_zoom,np.min(lats)-lat_zoom,np.max(lats)+lat_zoom] # map view bounds
 ax1.set_extent(extent) # set extents
 ax1.set_xticks(np.linspace(extent[0],extent[1],7),crs=ccrs.PlateCarree()) # set longitude indicators
 ax1.set_yticks(np.linspace(extent[2],extent[3],7)[1:],crs=ccrs.PlateCarree()) # set latitude indicators
@@ -75,12 +75,13 @@ ax1.yaxis.set_tick_params(labelsize=14)
 
 scale = np.ceil(-np.sqrt(2)*np.log(np.divide((extent[1]-extent[0])/2.0,350.0))) # empirical solve for scale based on zoom
 scale = (scale<20) and scale or 19 # scale cannot be larger than 19
-ax1.add_image(osm_img, int(scale)) # add OSM with zoom specification
+ax1.add_image(osm_img, int(scale+1)) # add OSM with zoom specification
 
 #######################################
 # Plot the GPS points
 #######################################
 #
+
 for ii in range(0,len(lons),10):
     ax1.plot(lons[ii],lats[ii], markersize=10,marker='o',linestyle='',
              color='#b30909',transform=ccrs.PlateCarree(),label='GPS Point') # plot points
