@@ -33,3 +33,7 @@ The Arduino code used to log GPS data is found at:
 The Python scripts used to parse the GPS coordinates from the .csv log file and plot them atop a street map can be found at:
 
 - [gps_mapper.py](/python/gps_mapper.py)
+
+The resulting plot should look similar to the one shown below, where the points have been parsed from the log file and plotted atop an open street map as red dots:
+
+![GPS Coordinates Mapped](/images/gps_coordinates_mapped.png)
