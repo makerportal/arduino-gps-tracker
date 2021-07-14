@@ -14,9 +14,14 @@ The arduino-gps-datalogger library can be downloaded using git:
     git clone https://github.com/makerportal/arduino-gps-datalogger
 
 <a id="wiring"></a>
-# - Wiring the ATGM336H GPS Module to Arduino Xiao (ATSAMD21) -
-We are wiring the ATGM336H GPS module via SPI to the Arduino Xiao (ATSAMD21) board:
+# - Wiring Diagram -
+Here, we are wiring the ATGM336H GPS module via SPI to the Arduino Xiao (ATSAMD21) board:
 
 ![ATGM336H wiring to ATSAMD21](/images/atgm336h_datalogger_wiring.jpg)
 
 ![ATGM336H wiring to ATSAMD21 - table](/images/atgm336h_datalogger_wiring_table.jpg)
+
+# - Arduino Code -
+The Arduino code used to log GPS data is found at:
+
+- gps_datalogger.ino
