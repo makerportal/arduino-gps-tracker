@@ -2,6 +2,7 @@
 #
 # Mapping GPS data acquired by Arduino 
 # -- using cartopy to visualize lat/lon points
+# -- by parsing .csv file: gpslog.csv
 #
 # by Joshua Hrisko | Maker Portal LLC (c) 2021
 #
