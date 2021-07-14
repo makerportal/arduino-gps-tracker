@@ -24,4 +24,4 @@ Here, we are wiring the ATGM336H GPS module via SPI to the Arduino Xiao (ATSAMD2
 # - Arduino Code -
 The Arduino code used to log GPS data is found at:
 
-- gps_datalogger.ino
+- [gps_datalogger.ino](/arduino/gps_datalogger.ino)
