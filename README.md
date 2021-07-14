@@ -1,8 +1,8 @@
 # Arduino GPS Tracker 
-Arduino GPS datalogger with ATGM336H module, SD card module, and ATSAMD21 microcontroller.
+Arduino GPS tracker with ATGM336H module, SD card module, LiPo battery, and ATSAMD21 microcontroller.
 
 Get an ATGM336H GPS module here: [ATGM336H Module](https://makersportal.com/shop/) <br>
-See full tutorial here: [Mini GPS Datalogger with Arduino](https://makersportal.com/blog/) <br>
+See full tutorial here: [Portable GPS Tracker with Arduino](https://makersportal.com/blog/) <br>
 
 # 
 ### JUMP TO:
@@ -10,9 +10,9 @@ See full tutorial here: [Mini GPS Datalogger with Arduino](https://makersportal.
 <a href="#arduino">- Arduino Codes</a><br>
 <a href="#python">- Python Scripts</a><br>
 
-The arduino-gps-datalogger library can be downloaded using git:
+The arduino-gps-tracker library can be downloaded using git:
 
-    git clone https://github.com/makerportal/arduino-gps-datalogger
+    git clone https://github.com/makerportal/arduino-gps-tracker
 
 <a id="wiring"></a>
 # - Wiring Diagram -
