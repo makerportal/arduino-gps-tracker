@@ -32,4 +32,4 @@ The Arduino code used to log GPS data is found at:
 # - Python Scripts -
 The Python scripts used to parse the GPS coordinates from the .csv log file and plot them atop a street map can be found at:
 
-- [gps_datalogger.ino](/arduino/gps_datalogger.ino)
+- [gps_mapper.py](/python/gps_mapper.py)
