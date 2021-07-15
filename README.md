@@ -1,8 +1,8 @@
 # Arduino GPS Tracker 
 Arduino GPS tracker with ATGM336H module, SD card module, LiPo battery, and ATSAMD21 microcontroller.
 
-Get an ATGM336H GPS module here: [ATGM336H Module](https://makersportal.com/shop/) <br>
-See full tutorial here: [Portable GPS Tracker with Arduino](https://makersportal.com/blog/) <br>
+Get an ATGM336H GPS module here: [ATGM336H GPS Module](https://makersportal.com/shop/mini-gps-module-atgm336h-antenna) <br>
+See full tutorial here: [Portable GPS Tracker with Arduino](https://makersportal.com/blog/portable-gps-tracker-with-arduino) <br>
 
 # 
 ### JUMP TO:
