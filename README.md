@@ -37,3 +37,7 @@ The Python scripts used to parse the GPS coordinates from the .csv log file and 
 The resulting plot should look similar to the one shown below, where the points have been parsed from the log file and plotted atop an open street map as red dots:
 
 ![GPS Coordinates Mapped](/images/gps_tracker_screenshot.png)
+
+---
+
+Part of the [Maker Portal](https://makerportal.ai) open-source scientific computing and hardware ecosystem. Explore interactive calculators and engineering tools at [makerportal.ai](https://makerportal.ai).
